@@ -1,0 +1,161 @@
+/* =============================================================
+   Sprite Scroll Experience — Enhanced Cinematic Quality
+   ============================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: #000;
+  overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* =============================================================
+   Main Animation Canvas
+   ============================================================= */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  background: #000;
+  /* Subtle saturation & contrast boost for richer colors */
+  filter: saturate(1.15) contrast(1.05) brightness(1.02);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* =============================================================
+   Cinematic Vignette Overlay
+   ============================================================= */
+#vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    /* Soft radial vignette — darkens edges, bright center */
+    radial-gradient(
+      ellipse 80% 70% at 50% 50%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.40) 75%,
+      rgba(0, 0, 0, 0.78) 100%
+    ),
+    /* Top & bottom letterbox-style fade */
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35) 0%,
+      transparent 12%,
+      transparent 88%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
+}
+
+/* =============================================================
+   Film Grain Canvas
+   ============================================================= */
+#grain-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.045;           /* Very subtle — adds texture without noise */
+  mix-blend-mode: overlay;  /* Blends grain into the image naturally */
+}
+
+/* =============================================================
+   Scroll Spacer
+   ============================================================= */
+#scroll-spacer {
+  position: relative;
+  z-index: 0;
+}
+
+/* =============================================================
+   Progress Bar
+   ============================================================= */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #00b154 0%, #fce300 50%, #00b154 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
+  z-index: 100;
+  border-radius: 0 2px 2px 0;
+  box-shadow:
+    0 0 8px  rgba(0, 177, 84, 0.9),
+    0 0 18px rgba(252, 227, 0, 0.5),
+    0 0 30px rgba(0, 177, 84, 0.3);
+  transition: width 0.04s linear;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position:   0% 0; }
+}
+
+/* =============================================================
+   Preloader
+   ============================================================= */
+#loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  z-index: 9999;
+  gap: 22px;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-ring {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+  border-top-color: #00b154;
+  border-left-color: rgba(0, 177, 84, 0.4);
+  border-bottom-color: #fce300;
+  animation: spin 0.9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow:
+    0 0 22px rgba(0, 177, 84, 0.55),
+    0 0 45px rgba(0, 177, 84, 0.2),
+    inset 0 0 22px rgba(252, 227, 0, 0.07);
+}
+
+.loader-pct {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, #00b154 0%, #fce300 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sprite Cool - Unleash the Chill</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#002106",
+                        "background": "#f9f9fc",
+                        "on-surface": "#1a1c1e",
+                        "on-secondary-fixed": "#001a42",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#464a00",
+                        "tertiary-container": "#98a000",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#00b140",
+                        "inverse-primary": "#51e169",
+                        "on-tertiary-fixed": "#1b1d00",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5e6300",
+                        "tertiary-fixed-dim": "#c5cf00",
+                        "surface-container-highest": "#e2e2e5",
+                        "tertiary-fixed": "#e1ec00",
+                        "on-primary-fixed-variant": "#005319",
+                        "primary": "#006e24",
+                        "on-secondary-fixed-variant": "#004395",
+                        "primary-fixed": "#70ff82",
+                        "outline-variant": "#bccbb7",
+                        "surface": "#f9f9fc",
+                        "surface-dim": "#dadadc",
+                        "on-background": "#1a1c1e",
+                        "surface-tint": "#006e24",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container-high": "#e8e8ea",
+                        "surface-variant": "#e2e2e5",
+                        "primary-fixed-dim": "#51e169",
+                        "on-secondary-container": "#00306f",
+                        "inverse-on-surface": "#f0f0f3",
+                        "on-tertiary-container": "#313400",
+                        "surface-bright": "#f9f9fc",
+                        "outline": "#6d7b6a",
+                        "surface-container-low": "#f3f3f6",
+                        "on-primary-container": "#003a0f",
+                        "surface-container": "#eeeef0",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3133",
+                        "secondary-fixed-dim": "#aec6ff",
+                        "secondary-container": "#6399ff",
+                        "secondary": "#115bbe",
+                        "on-surface-variant": "#3d4a3c",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "section-gap-desktop": "120px",
+                        "section-gap-mobile": "64px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Anybody", "sans-serif"],
+                        "headline-lg": ["Anybody", "sans-serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg-mobile": ["Anybody", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-md": ["Anybody", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 110, 36, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Shared TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-surface-container-highest px-6 md:px-10 py-4 bg-surface/90 backdrop-blur-md">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="font-headline-md text-xl tracking-tight">Sprite Cool</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#features">Features</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#collection">Collection</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#lifestyle">Lifestyle</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary-container hover:bg-primary transition-colors text-on-primary-container hover:text-on-primary font-label-md shadow-sm">
+<span class="truncate">Buy Now</span>
+</button>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-on-surface">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-[72px]">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center px-6 py-20 overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute inset-0 z-0 bg-gradient-to-br from-surface to-primary-container/10"></div>
+<div class="absolute top-20 -left-20 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl opacity-50 mix-blend-multiply"></div>
+<div class="absolute bottom-10 right-10 w-[500px] h-[500px] bg-secondary-fixed/40 rounded-full blur-3xl opacity-50 mix-blend-multiply"></div>
+<div class="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest/50 border border-outline-variant/30 w-fit backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary text-sm">local_fire_department</span>
+<span class="font-label-md text-sm text-on-surface-variant uppercase tracking-wider">New Arrival</span>
+</div>
+<h1 class="font-headline-xl text-5xl md:text-7xl text-on-surface">
+                        Unleash the <br/><span class="text-primary italic pr-4">Chill</span>
+</h1>
+<p class="font-body-lg text-lg text-on-surface-variant max-w-lg">
+                        Experience the ultimate citrus refresh with the all-new Sprite Cool. Crafted for those who demand an intense, thirst-quenching burst of natural lemon flavor.
+                    </p>
+<div class="flex flex-wrap items-center gap-4 mt-4">
+<button class="flex h-14 px-8 rounded-full bg-primary hover:bg-on-primary-fixed-variant transition-colors items-center justify-center text-on-primary font-label-md text-base shadow-lg shadow-primary/20 hover:-translate-y-1 duration-300">
+                            Buy Now
+                        </button>
+<button class="flex h-14 px-8 rounded-full bg-surface hover:bg-surface-container transition-colors items-center justify-center text-primary font-label-md text-base border border-outline-variant shadow-sm">
+                            Watch Video <span class="material-symbols-outlined ml-2 text-xl">play_circle</span>
+</button>
+</div>
+</div>
+<div class="relative h-[500px] md:h-[700px] w-full flex items-center justify-center">
+<!-- Image Placeholder injected via pipelined system -->
+<img class="w-full h-full object-contain filter drop-shadow-2xl z-10 hover:scale-105 transition-transform duration-700 ease-out" data-alt="A studio-quality, high-resolution product shot of a sleek, condensation-covered Sprite Cool bottle or can on a bright, modern light-mode background. The setting is vibrant and refreshing, featuring a clean white backdrop punctuated by intense, lively splashes of vibrant green and citrus yellow liquid and ice cubes suspended in mid-air. The lighting is high-key and crisp, casting soft shadows that emphasize the frosty texture of the beverage container. The overall aesthetic is energetic, thirst-quenching, and visually striking, fitting for a modern beverage campaign." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwE9erXLuzSCuf-LK11_PUYexs7h1ZsblBGSGTRUGo2A5Gwgi9WsprnJUomk77dQfh-OUx_lmSJUgNI8KPMLJcrM0Wc9hQA5ufOFfq7SKgdMgb4n8ldcRxC6ygWd6vmJJ8JzmMDBEImtbB_7iOOJesmaBd8gH0lq1XIXJ9xy1vxdsulZuBXUnyx8wkQNdA9EW7YgVK9KEqcb6kl9OcPOk8AxJjfTTW26XN7yQRryxZyA1jLfQeqDMPnw"/>
+<!-- Decorative elements behind image -->
+<div class="absolute inset-0 flex items-center justify-center -z-10">
+<div class="w-full h-full max-w-md max-h-md rounded-full bg-gradient-to-tr from-primary-fixed to-surface opacity-20 blur-2xl animate-pulse"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-6 relative bg-surface-container-lowest" id="features">
+<div class="max-w-7xl mx-auto flex flex-col gap-16">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="font-headline-lg text-4xl md:text-5xl text-on-surface">Crisp. Cold. Citrus.</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Discover why Sprite Cool is your perfect summer companion. We've redefined refreshment from the ground up.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">psychiatry</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-headline-md text-2xl text-on-surface">100% Natural Lemon</h3>
+<p class="font-body-md text-on-surface-variant">Made with real lemon essence for that crisp, authentic citrus taste that awakens your senses.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:-translate-y-2 transition-transform duration-300 delay-100">
+<div class="w-16 h-16 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-headline-md text-2xl text-on-surface">Zero Caffeine</h3>
+<p class="font-body-md text-on-surface-variant">Enjoy the refreshing kick without the jitters. It's the perfect thirst-quencher for any time of day or night.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:-translate-y-2 transition-transform duration-300 delay-200">
+<div class="w-16 h-16 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">air</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-headline-md text-2xl text-on-surface">Perfect Carbonation</h3>
+<p class="font-body-md text-on-surface-variant">Optimized bubble size and density engineered for the ultimate, invigorating mouthfeel.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Collection Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-6 bg-surface" id="collection">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-surface-container-highest pb-8">
+<div>
+<h2 class="font-headline-lg text-4xl md:text-5xl text-on-surface mb-4">The Cool Collection</h2>
+<p class="font-body-lg text-on-surface-variant">A size for every thirst. Pick your perfect chill.</p>
+</div>
+<a class="inline-flex items-center text-primary font-label-md hover:underline" href="#">
+                        View All Products <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="group flex flex-col gap-6 bg-surface-container-low p-8 rounded-3xl border border-surface-container-highest hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+<div class="relative h-80 rounded-2xl overflow-hidden bg-surface-container flex items-center justify-center p-6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent z-10"></div>
+<img class="w-full h-full object-contain relative z-20 group-hover:scale-110 transition-transform duration-500" data-alt="A bright, studio-lit photo of a frosty 330ml Sprite Cool aluminum can against a clean, light-mode background. The can is covered in condensation droplets, looking incredibly refreshing. The scene includes subtle hints of vibrant green and yellow light bouncing off the metal. The mood is crisp, modern, and energetic, emphasizing the product's cool temperature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOmwxlUmVF5SDKZ9fVtsYymWmtF_10eLBruuzQJmcEAf3hTUnsbHkturE_DyKU7Ev4TNMPaK44HAnqrPeBX0ABpeNomGyjwqpLob1po6RKGor6fLUbYZRa_l_R97OcXbryDtO7m9eey6Kvza8vcZF2hzblV6_Sp_TjTjt9edMLyLNHxJ3VSLWFo4QkKI7wMHUWqcRCeHcx3pAsX9dDNBubZRzPDp5KqyUy2N-TzG5hXSw1hTa53EdKg"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-xl text-on-surface">330ml Can</h3>
+<span class="font-label-md text-primary">$1.99</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant">Quick refreshment on the go.</p>
+<button class="mt-4 w-full h-12 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col gap-6 bg-surface-container-low p-8 rounded-3xl border border-primary/20 shadow-md shadow-primary/10 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full z-30 uppercase tracking-wide">
+                            Best Seller
+                        </div>
+<div class="relative h-80 rounded-2xl overflow-hidden bg-surface-container flex items-center justify-center p-6">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent z-10"></div>
+<img class="w-full h-full object-contain relative z-20 group-hover:scale-110 transition-transform duration-500" data-alt="A vivid, high-resolution image of a 500ml Sprite Cool PET bottle, heavily beaded with cold condensation, centered on a pristine white background with subtle, high-key lighting. Small splashes of clear, sparkling water and a few green lemon leaves float delicately around the bottle. The aesthetic is extremely clean, modern, and bright, conveying a sense of pure, natural refreshment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpk6eMBf0WnhInQum0x-UdGALvKFrcxGHSrXU7RoaL3bvs3JQpiPI0xSZ3uvFqxPF2qHD-FYg8Y17uEmwn-Vr9hE7ODBYl4NFMaM37fOSr59aDltabB4jOBw7TGUUR2N6jOMBfxJ5Tr-3CL6h1ZUYf9tfbiiV-9WiIcdRF9HTdgUdjvyBAhZaBJqROtTqWjezzkNdnuLOdROIjGrc-jjQ7hb6F_UK-wHxU6w53LzRvQE9JMkoft2i-ew"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-xl text-on-surface">500ml Bottle</h3>
+<span class="font-label-md text-primary">$2.49</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant">The perfect personal size.</p>
+<button class="mt-4 w-full h-12 rounded-full bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors font-label-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col gap-6 bg-surface-container-low p-8 rounded-3xl border border-surface-container-highest hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+<div class="relative h-80 rounded-2xl overflow-hidden bg-surface-container flex items-center justify-center p-6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent z-10"></div>
+<img class="w-full h-full object-contain relative z-20 group-hover:scale-110 transition-transform duration-500" data-alt="A crisp, professional product shot of a large 1.5L Sprite Cool bottle standing tall on a bright, minimalist surface. The bottle is chilled, with frost and condensation visible on the green plastic. The background is a soft, airy light-mode white with very subtle geometric shadows to give depth. The overall feel is generous, sociable, and refreshingly cool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDbhQyXIxx45lGVIpqURgr9hs4bfSfOVqr_kr4GZmYjt5PM7i6HRzSXfw_IFTTUaiN77kHDRtbn2CqX3-V_F2ozvBbcHcJf6FU0mVvdqAGEeNB1tWvrYbHXOrtngoYWXzGdebXkxTBtLZsk8HLmORNwH7yHuFp7MOsiA3POH8OdUHYJuuXEikxCQYMpn-HZeOOxc_dnpgeGJ4LzVlBb7ssrpjGKcY8K0T9HvNVbJ3ULhMqdmhoJy7ATA"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-xl text-on-surface">1.5L Party Size</h3>
+<span class="font-label-md text-primary">$3.99</span>
+</div>
+<p class="font-body-md text-sm text-on-surface-variant">Share the chill with friends.</p>
+<button class="mt-4 w-full h-12 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span> Add to Cart
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lifestyle Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-6 bg-surface-container-lowest" id="lifestyle">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-4xl md:text-5xl text-on-surface mb-4">Stay Cool Anywhere</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">From the beach to the skatepark, Sprite Cool is the perfect companion for your summer adventures.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 grid-rows-[auto] gap-4 md:h-[600px]">
+<!-- Large Image -->
+<div class="md:col-span-8 md:row-span-2 rounded-3xl overflow-hidden relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vibrant, lifestyle photograph of young adults enjoying a sunny day at a modern, concrete skatepark. They are laughing, hanging out, and drinking from frosty cans of Sprite Cool. The lighting is bright, natural daylight, emphasizing the bright whites and vivid greens of their clothing and the beverage branding. The mood is energetic, youthful, and quintessentially summer in a light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW_dt8HmuxanIxh9AfqKarzGC_4Cx_0Bscso9WskxdUfLpU4Ywjj_c0dWljpqli56QxyVc6W1RsaizkFZVFpE9fRSGMdxiyFOCGQ-A1-frNkmmukPuesDWhBPJSeHyZ08upc5ITzJaO3leL1HIUmt5Y2Ut-lLyJMTkRTC1meN-6hu26rvO127IhElV3u_M0SxHs-6-Taqn9z-sMWB2ZsHcOBtxpwe7E2Byqw9BSFLVGE4iEYd33TVW1w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-8 left-8 right-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+<h3 class="font-headline-md text-2xl mb-2">Urban Adventures</h3>
+<p class="font-body-md text-white/80">Keep the momentum going.</p>
+</div>
+</div>
+<!-- Small Image 1 -->
+<div class="md:col-span-4 md:row-span-1 rounded-3xl overflow-hidden relative group h-64 md:h-auto">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A high-key, stylized photograph of a hand holding an ice-cold bottle of Sprite Cool against a clear, bright blue summer sky. There are minimal, fluffy white clouds in the background. The lighting is intense and sunny, casting a slight lens flare. The overall tone is refreshing, airy, and minimal, focusing strongly on the vibrant green and white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoPTI7gmZSiaPuFk5tjMdLdZQ5q3dnUqhARxhySLiJrUp3BgOYR-b5jMKYc_7va0me-V2HrlntjfQKRPZJL0vNlPC34nVCUFGC47WPLX-SKu_8DsFWeWgctEYax72SfnnuGG90zwtDbQXUnCu6LzjiuYdgBJ_39sMxCbLPM3k-daDjbWCsttYLxAUuD17Sljf5RVLg_ST1Pzdt5vUKqODevF7NIMVhSnk-vk9yrxxS8zz1K8l9U-DbsA"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+</div>
+<!-- Small Image 2 -->
+<div class="md:col-span-4 md:row-span-1 rounded-3xl overflow-hidden relative group h-64 md:h-auto">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A bright lifestyle shot focusing on a casual summer picnic setup on lush green grass. A cooler bag is slightly open, revealing ice and several cans of Sprite Cool. The scene is bathed in dappled, bright sunlight filtering through leaves, creating a high-contrast light-mode look. The mood is relaxing, social, and perfectly suited for a warm day outdoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK5kxylIgYgbeUVe33PxzXyik22K2Rz70ncPVbsiWf0noQ-t0Kaz39Wsv-0-HYPIMiLD3kYPsiDGB_uF8S4kCy69hi_geAsMYl4Nr6n_U4MorManKui1All2KH8HnLK0Nte66Ggxp9M09QfglfgkSNOpHEm6R4JTHp5PdQWDEJ3XoeOXGBEjIpDMZDQkWxk5Fn8RIiEW944pwp6nY3lfMMbsUD6FOvSi-uDpsz4mzy2Kk-6_pRGWSyrQ"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined text-white text-5xl">park</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high py-12 px-6 border-t border-surface-container-highest">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-headline-md text-2xl">Sprite Cool</span>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-surface-container-highest text-center text-on-surface-variant font-body-md text-sm">
+            © 2024 Sprite Cool Refreshments. All rights reserved. Designed for the chill.
+        </div>
+</footer>
+</body></html>
